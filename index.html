@@ -266,8 +266,15 @@
         
         /* Mobile responsive adjustments */
         @media (max-width: 768px) {
+            body {
+                overflow: auto;
+            }
+            
             .container {
                 padding: 1rem;
+                position: relative;
+                min-height: 100vh;
+                overflow: visible;
             }
             
             .buttons {
@@ -330,7 +337,7 @@
         <!-- Yes Classes Page -->
         <div id="yesClassesPage" class="step">
             <h1>🎉 Then join our FREE Discord Community!</h1>
-            <div class="description">
+            <div class="description" style="font-size: clamp(0.7rem, 2.5vw, 1rem); margin-bottom: 2rem;">
                 Grab the free resources by introducing yourself. Then, participate in our daily activities to earn a CLASS PASS and get your free class!
             </div>
             

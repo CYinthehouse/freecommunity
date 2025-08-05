@@ -196,17 +196,17 @@
         .download-container {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
-            padding: 1.5rem;
-            margin: 1.5rem auto;
-            max-width: 500px;
+            padding: 1.2rem;
+            margin: 1.2rem auto;
+            max-width: 450px;
             width: 100%;
             backdrop-filter: blur(5px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
         .download-container h3 {
-            font-size: clamp(0.8rem, 2.5vw, 1.1rem);
-            margin-bottom: 1.2rem;
+            font-size: clamp(0.8rem, 2.5vw, 1rem);
+            margin-bottom: 1rem;
             color: #ffd700;
             text-shadow: 
                 -1px -1px 0 #000,
@@ -218,15 +218,15 @@
         .download-buttons {
             display: flex;
             flex-direction: column;
-            gap: 0.8rem;
+            gap: 0.7rem;
             align-items: center;
         }
         
         .download-buttons button {
-            padding: clamp(12px, 2vw, 16px) clamp(24px, 3vw, 40px);
-            font-size: clamp(0.8rem, 2.5vw, 1.1rem);
-            min-width: 180px;
-            max-width: 320px;
+            padding: clamp(10px, 2vw, 14px) clamp(20px, 3vw, 30px) !important;
+            font-size: clamp(0.8rem, 2.5vw, 1rem) !important;
+            min-width: 160px !important;
+            max-width: 250px !important;
         }
         
         .download-reminder {
@@ -251,6 +251,19 @@
             padding: clamp(8px, 2vw, 12px) clamp(20px, 4vw, 28px);
             font-size: clamp(0.7rem, 2.5vw, 0.9rem);
             min-width: 80px;
+        }
+        
+        .hero-image {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            width: clamp(200px, 60vw, 400px);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         
         .final-message {
@@ -302,6 +315,14 @@
                 padding: clamp(10px, 3vw, 12px) clamp(16px, 4vw, 20px);
                 font-size: clamp(0.7rem, 3vw, 0.9rem);
             }
+            
+            .hero-image {
+                margin-top: 1.5rem;
+            }
+            
+            .hero-image img {
+                width: clamp(180px, 80vw, 300px);
+            }
         }
     </style>
 </head>
@@ -316,6 +337,9 @@
             <div class="buttons">
                 <button onclick="showStep('page2')" class="primary">YES</button>
                 <button onclick="showStep('noResourcesPage')" class="secondary">NO</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://cdn.shopify.com/s/files/1/0674/6747/7282/files/KOREANLEARNIN.png?v=1754436909" alt="Korean Learning" />
             </div>
         </div>
 

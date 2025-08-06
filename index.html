@@ -264,8 +264,7 @@
         .hero-image {
             margin-top: 1rem;
             text-align: center;
-            height: 400px;
-            overflow: hidden;
+            position: relative;
         }
         
         .hero-image img {
@@ -274,13 +273,12 @@
             width: clamp(300px, 60vw, 550px);
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            position: relative;
-            top: 100%;
-            transition: all 0.8s ease-out;
+            transform: translateY(100vh);
+            transition: transform 0.8s ease-out;
         }
         
         .hero-image.slide-up img {
-            top: 0;
+            transform: translateY(0);
         }
         
         .final-message {
@@ -335,7 +333,6 @@
             
             .hero-image {
                 margin-top: 1rem;
-                height: 300px;
             }
             
             .hero-image img {

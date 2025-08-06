@@ -143,6 +143,9 @@
         button.primary {
             background: linear-gradient(45deg, #27ae60, #2ecc71);
             box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+        }
+        
+        button.primary.glow-active {
             animation: figmaGlow 2s ease-in-out infinite;
         }
         
@@ -428,7 +431,7 @@
                 Click the button below and be sure to introduce yourself to get all the free resources.
             </div>
             <div class="buttons">
-                <button onclick="joinDiscord()" class="primary">Join</button>
+                <button onclick="joinDiscord()" class="primary glow-active">Join</button>
             </div>
         </div>
     </div>
@@ -463,7 +466,25 @@
                                 if (heroImage) {
                                     heroImage.classList.add('slide-up');
                                 }
+                                
+                                // Start button glow 200ms after image slide-up completes
+                                setTimeout(() => {
+                                    const primaryButton = targetStep.querySelector('button.primary');
+                                    if (primaryButton) {
+                                        primaryButton.classList.add('glow-active');
+                                    }
+                                }, 1000); // 800ms slide + 200ms delay
                             }, 100);
+                        }
+                        
+                        // Trigger timed button glow for page2
+                        if (stepId === 'page2') {
+                            setTimeout(() => {
+                                const primaryButton = targetStep.querySelector('button.primary');
+                                if (primaryButton) {
+                                    primaryButton.classList.add('glow-active');
+                                }
+                            }, 200); // 200ms delay after page loads
                         }
                     }
                 }, 500); // Match the CSS transition duration
@@ -488,6 +509,14 @@
                             if (heroImage) {
                                 heroImage.classList.add('slide-up');
                             }
+                            
+                            // Start button glow 200ms after image slide-up completes
+                            setTimeout(() => {
+                                const primaryButton = targetStep.querySelector('button.primary');
+                                if (primaryButton) {
+                                    primaryButton.classList.add('glow-active');
+                                }
+                            }, 1000); // 800ms slide + 200ms delay
                         }, 500);
                     }
                 }
@@ -546,6 +575,14 @@
                 if (heroImage) {
                     heroImage.classList.add('slide-up');
                 }
+                
+                // Start button glow 200ms after image slide-up completes
+                setTimeout(() => {
+                    const primaryButton = document.querySelector('#page1 button.primary');
+                    if (primaryButton) {
+                        primaryButton.classList.add('glow-active');
+                    }
+                }, 1000); // 800ms slide + 200ms delay
             }, 800);
         });
     </script>
